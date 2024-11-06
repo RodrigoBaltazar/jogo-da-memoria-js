@@ -1,0 +1,93 @@
+/* Contêiner principal para a grade e os botões */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Estilos para a grade */
+        .grid-4x4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 colunas de tamanhos iguais */
+            gap: 10px; /* Espaçamento entre as cartas */
+            max-width: 100%; /* Para ajustar ao tamanho da tela */
+            /* margin: 0 auto; Centraliza a grade horizontalmente */
+        }
+
+        /* Estilos para as cartas */
+        .grid-4x4 div {
+            background-color: #4CAF50; /* Cor de fundo das cartas */
+            border-radius: 8px; /* Bordas arredondadas */
+            aspect-ratio: 1; /* Mantém cada carta quadrada */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Estilos para os botões */
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Ajustes para telas maiores (desktop) */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row; /* Alinha a grade e os botões na horizontal */
+                justify-content: center;
+            }
+
+            .buttons {
+                flex-direction: column; /* Botões empilhados na versão desktop */
+            }
+
+            .grid-4x4 {
+                grid-template-columns: repeat(4, 150px); /* Cada célula terá 150px de largura */
+                gap: 15px;
+            }
+
+            .grid-4x4 div {
+                font-size: 2rem; /* Aumenta o tamanho do texto nas cartas */
+            }
+        }
+
+        /* Ajustes para dispositivos móveis (iPhone 12 e outros) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Coloca a grade e os botões na vertical */
+                display: block;
+            }
+
+            .buttons {
+                flex-direction: row; /* Botões lado a lado na versão mobile */
+                margin-top: 10%;
+                justify-content: center;
+            }
+
+            .grid-4x4 {
+                grid-template-columns: repeat(4, 1fr); /* Cada coluna se adapta ao tamanho da tela */
+                gap: 8px;
+            }
+
+            .grid-4x4 div {
+                font-size: 1.2rem; /* Tamanho do texto reduzido em telas menores */
+            }
+        }
