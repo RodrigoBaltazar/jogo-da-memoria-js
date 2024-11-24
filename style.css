@@ -7,7 +7,7 @@
         }
 
         /* Estilos para a grade */
-        .grid-4x4 {
+       #grid-8x8 {
             display: grid;
             grid-template-columns: repeat(4, 1fr); /* 4 colunas de tamanhos iguais */
             gap: 10px; /* Espaçamento entre as cartas */
@@ -15,9 +15,10 @@
             /* margin: 0 auto; Centraliza a grade horizontalmente */
         }
 
+
         /* Estilos para as cartas */
-        .grid-4x4 div {
-            background-color: #4CAF50; /* Cor de fundo das cartas */
+        #grid-8x8 div{
+            background-color: red; /* Cor de fundo das cartas */
             border-radius: 8px; /* Bordas arredondadas */
             aspect-ratio: 1; /* Mantém cada carta quadrada */
             display: flex;
@@ -27,6 +28,7 @@
             color: white;
             font-weight: bold;
         }
+        
 
         /* Estilos para os botões */
         .buttons {
@@ -38,14 +40,14 @@
             padding: 10px 20px;
             font-size: 1rem;
             color: white;
-            background-color: #007BFF;
+            background-color: gold;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
 
         .buttons button:hover {
-            background-color: #0056b3;
+            background-color: gold;
         }
 
         /* Ajustes para telas maiores (desktop) */
@@ -59,12 +61,12 @@
                 flex-direction: column; /* Botões empilhados na versão desktop */
             }
 
-            .grid-4x4 {
+            #grid-8x8 {
                 grid-template-columns: repeat(4, 150px); /* Cada célula terá 150px de largura */
                 gap: 15px;
             }
 
-            .grid-4x4 div {
+            #grid-8x8 div {
                 font-size: 2rem; /* Aumenta o tamanho do texto nas cartas */
             }
         }
@@ -82,12 +84,12 @@
                 justify-content: center;
             }
 
-            .grid-4x4 {
+            .grid-8x8 {
                 grid-template-columns: repeat(4, 1fr); /* Cada coluna se adapta ao tamanho da tela */
                 gap: 8px;
             }
 
-            .grid-4x4 div {
+            .grid-8x8 div {
                 font-size: 1.2rem; /* Tamanho do texto reduzido em telas menores */
             }
         }
