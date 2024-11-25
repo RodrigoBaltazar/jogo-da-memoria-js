@@ -68,6 +68,17 @@
 
             #grid-8x8 div {
                 font-size: 2rem; /* Aumenta o tamanho do texto nas cartas */
+                width: 100px; /* Largura padrão */
+                height: 150px;
+                max-width: 150px; /* Largura máxima */
+                max-height: 200px; /* Altura máxima */
+                overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites */
+                border: 1px solid #000; /* Apenas para visualização */
+            }
+            #grid-8x8 img {
+                width: 100%; /* A imagem ocupa 100% da largura da div */
+                height: auto; /* Ajusta a altura proporcionalmente */
+                object-fit: cover; /* Ajusta a imagem para preencher a div */
             }
         }
 
